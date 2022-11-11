@@ -1,3 +1,8 @@
 # TODO настраиваем urls здесь
+from django.urls import path
 
-urlpatterns = []
+from moderation.views import ReviewDeleteView
+
+urlpatterns = [
+    path("feedback-delete/<int:pk>/", ReviewDeleteView.as_view())
+]
